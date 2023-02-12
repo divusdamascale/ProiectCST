@@ -1,0 +1,32 @@
+{
+  "signupUsersList": [
+    {
+      "id": "1",
+      "email": "test@test",
+      "password": "12341234",
+      "firstName": "Test",
+      "lastName": "Last"
+    },
+    {
+      "email": "asd@asd",
+      "password": "asdasdasd",
+      "firstName": "asd",
+      "lastName": "asd",
+      "id": "e47tz9M"
+    },
+    {
+      "email": "dutudenis30@yahoo.com",
+      "password": "12345678",
+      "firstName": "Denis",
+      "lastName": "Dutu",
+      "id": "J6jIDEr"
+    },
+    {
+      "email": "dutudori@yahoo.com",
+      "password": "12341234",
+      "firstName": "Dori",
+      "lastName": "Dutu",
+      "id": "at_7o3u"
+    }
+  ]
+}

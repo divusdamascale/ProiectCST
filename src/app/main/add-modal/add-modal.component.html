@@ -1,0 +1,32 @@
+<button nz-button (click)="showModal()"><span>Add Task</span></button>
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle="Task Creator"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+>
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="form">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6">Task Name</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <input nz-input formControlName="name" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6">Due Time</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <nz-date-picker formControlName="date"></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6">Urgent</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <label nz-checkbox formControlName="urgent"></label>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </ng-container>
+</nz-modal>

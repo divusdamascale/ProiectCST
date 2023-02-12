@@ -1,0 +1,46 @@
+.addButton
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button
+{
+    margin-left: 5px;
+}
+
+
+.list
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.actions
+{
+    display: flex;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: left;
+}
+
+#delete
+{
+    justify-content: baseline;
+    margin-left: 5px;
+}
+

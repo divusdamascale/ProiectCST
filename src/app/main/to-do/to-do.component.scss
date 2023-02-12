@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.svg {
+  height: 6rem;
+  width: 6rem;
+  margin-right: 3rem;
+}
+
+.settings {
+  margin-left: auto;
+  text-align: right;
+  margin-top: auto;
+  margin-right: 5%;
+}
+
+.search {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
