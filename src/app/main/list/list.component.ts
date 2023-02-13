@@ -30,15 +30,15 @@ export class ListComponent {
   }>();
 
   data: any[] = [
-    {
-      name: 'Teme',
-      date: 'Feb 09 2023',
-      realdate: new Date(),
-      urgent: true,
-      time: 0,
-      intervalId: null,
-      timerRunning: false,
-    },
+    // {
+    //   name: 'Teme',
+    //   date: 'Feb 09 2023',
+    //   realdate: new Date(),
+    //   urgent: true,
+    //   time: 0,
+    //   intervalId: null,
+    //   timerRunning: false,
+    // },
   ];
 
   done: any[] = [];

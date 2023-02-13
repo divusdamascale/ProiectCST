@@ -1,38 +1,40 @@
 <h3 [ngStyle]="{ margin: '16px 0' }" #myMode>{{ mode }}</h3>
-<ul nz-list [nzDataSource]="data" nzBordered nzSize="large">
-  <nz-list-header>
-    <ul class="list">
-      <li style="width: 150px">Name</li>
-      <li style="width: 150px">Due Time</li>
-      <li style="width: 150px">Timer</li>
-      <li style="width: 150px">Actions</li>
-    </ul>
-  </nz-list-header>
+<ng-container *ngIf="data.length > 0">
+  <ul nz-list [nzDataSource]="data" nzBordered nzSize="large">
+    <nz-list-header>
+      <ul class="list">
+        <li style="width: 150px">Name</li>
+        <li style="width: 150px">Due Time</li>
+        <li style="width: 150px">Timer</li>
+        <li style="width: 150px">Actions</li>
+      </ul>
+    </nz-list-header>
 
-  <li
-    nz-list-item
-    *ngFor="let item of filteredItems() | sortByDate : 'realdate'"
-    nzNoFlex
-  >
-    <ul nz-list-item-actions></ul>
-    <ul class="list">
-      <li style="width: 150px">{{ item.name }}</li>
-      <li style="width: 150px">{{ item.date }}</li>
-      <li style="width: 150px" class="timer">{{ gettimeDisplay(item) }}</li>
-      <li style="width: 150px" class="timer">
-        <div class="buttons">
-          <button nz-button nzType="primary" (click)="toggleTimer(item)">
-            {{ item.timerRunning ? "Stop" : "Start" }}
-          </button>
-          <button nz-button (click)="addObjectDone(item)">Done</button>
-          <a (click)="deleteTask(item)" id="delete"
-            ><span nz-icon nzType="delete"></span
-          ></a>
-        </div>
-      </li>
-    </ul>
-  </li>
-</ul>
+    <li
+      nz-list-item
+      *ngFor="let item of filteredItems() | sortByDate : 'realdate'"
+      nzNoFlex
+    >
+      <ul nz-list-item-actions></ul>
+      <ul class="list">
+        <li style="width: 150px">{{ item.name }}</li>
+        <li style="width: 150px">{{ item.date }}</li>
+        <li style="width: 150px" class="timer">{{ gettimeDisplay(item) }}</li>
+        <li style="width: 150px" class="timer">
+          <div class="buttons">
+            <button nz-button nzType="primary" (click)="toggleTimer(item)">
+              {{ item.timerRunning ? "Stop" : "Start" }}
+            </button>
+            <button nz-button (click)="addObjectDone(item)">Done</button>
+            <a (click)="deleteTask(item)" id="delete"
+              ><span nz-icon nzType="delete"></span
+            ></a>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</ng-container>
 <div class="addButton">
   <app-add-modal (saved)="addObject($event)"></app-add-modal>
 </div>
