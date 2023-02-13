@@ -1,4 +1,4 @@
-import { LoggedInService } from './../logged-in.service';
+import { LoggedInService } from './../_core/services/logged-in.service';
 import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,

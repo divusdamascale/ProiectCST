@@ -1,5 +1,5 @@
-import { LoggedInService } from './../../logged-in.service';
-import { PassDataService } from './../../pass-data.service';
+import { PassDataService } from './../../_core/services/pass-data.service';
+import { LoggedInService } from './../../_core/services/logged-in.service';
 import { Component, Output } from '@angular/core';
 import { Router } from '@angular/router';
 

@@ -1,5 +1,5 @@
-import { LoggedInService } from './../../logged-in.service';
-import { PassDataService } from './../../pass-data.service';
+import { PassDataService } from './../../_core/services/pass-data.service';
+import { LoggedInService } from './../../_core/services/logged-in.service';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
